@@ -1,0 +1,134 @@
+@import '../node_modules/bootstrap/scss/_functions';
+@import '../node_modules/bootstrap/scss/_variables';
+
+$primary:#3956de;
+$lead:#9b9bae;
+.navbar-nav .nav-item >a:hover,.navbar-nav .nav-item >a.active{
+color: $primary;
+}
+.btn-primary {
+    background: linear-gradient(90deg,#3956de 0,#657be5)!important;
+}
+nav.scroll {
+    background-color: white !important;
+    position: sticky !important;
+    top:0;
+}
+div>i {
+    &:hover {
+        color: $primary
+    }
+}
+.btn {
+    transition: all 0.4s !important;
+    &:hover {
+        transform: translateY(-1em);
+        
+    }
+    
+}
+.about {
+   div {
+    a {
+        text-decoration: none
+    }
+   
+   }
+}
+.service {
+    .card {
+        transition: all 0.8s;
+              &:hover {
+            background:rgba(0, 0, 255, 0.733);
+            color: white;
+           
+        }
+    }
+    .image-card {
+        background-image:url('../images/servicebg.png');
+        object-fit: contain;
+       background-size: contain;
+       background-repeat: no-repeat;
+        background-position: center;
+       
+    }
+}
+.projects {
+   
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.438);
+        height: 100%;
+        width:100%;
+        z-index: 100;
+      top: 0;
+        transition: all  0.5;
+        opacity: 0;
+        transform: translateY(100%);   
+        transform-origin: top;    
+         display: none;
+        position: absolute;
+        animation:overlay-layer 1s ;
+    @keyframes overlay-layer {
+        0%{
+            opacity: 0;
+            transform: translateY(100%);   
+
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+            
+        }
+    }
+    
+    }
+    
+}
+.project-image {
+     position:relative;
+     overflow: hidden
+     ;
+     &:hover .overlay {
+        display:block;
+        transform: translateY(0); 
+        opacity: 1;  
+
+     }
+ 
+ }
+ .form-control {
+    &:focus {
+        border: 1px solid $primary !important;
+        // border: none;
+    }
+    background-color: #9b9bae
+ }
+ .footer {
+
+        p {
+            transition: all 0.4s;
+            &:hover {
+                color: white !important;
+                cursor:pointer;
+                transform: translateX(10px)
+            }
+        }
+    }
+ 
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import "../node_modules/bootstrap/scss/bootstrap-utilities";
+
+//Generate utilites for Cursor
+$utilities: map-merge(
+  $utilities,
+  (
+    "cursor": (
+      property: cursor,
+      values: auto default pointer wait text move help not-allowed
+    ),
+  )
+);
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+
